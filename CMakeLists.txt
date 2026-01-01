@@ -3,4 +3,6 @@ project(CSV_Parser)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(CSV_Parser main.cpp)
+add_executable(CSV_Parser src/main.cpp
+        src/parser.cpp
+        src/parser.h)
