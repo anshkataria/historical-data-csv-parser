@@ -36,6 +36,8 @@ std::vector<Price> parser::parsePrice() {
         std::getline(ss, high,',');
         std::getline(ss, low,',');
         Price temp;
+        // invalid argument error resolved as the closing price was containing $ sign at the start
+        closingPrice = closingPrice.substr(1);
         temp.date = date;
         temp.closingPrice=std::stod(closingPrice);
         prices.push_back(temp);
