@@ -5,14 +5,21 @@
 #ifndef CSV_PARSER_PARSER_H
 #define CSV_PARSER_PARSER_H
 #include <string>
+#include <vector>
 
 struct Price {
     std::string date;
     double closingPrice;
 };
+
 class parser {
+private:
+    std::string filename;
 public:
-    parser() = default;
+    parser(std::string filename) {
+        this->filename = filename;
+    } ;
+    std::vector<Price> parsePrice(std::string);
 };
 
 
