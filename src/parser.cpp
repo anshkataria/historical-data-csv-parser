@@ -8,7 +8,7 @@
 #include <iostream>
 #include <sstream>
 
-std::vector<Price> parser::parsePrice(std::string) {
+std::vector<Price> parser::parsePrice() {
     std::vector<Price> prices;
 
     std::fstream csv(filename, std::ios::in);

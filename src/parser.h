@@ -19,7 +19,7 @@ public:
     parser(std::string filename) {
         this->filename = filename;
     } ;
-    std::vector<Price> parsePrice(std::string);
+    std::vector<Price> parsePrice();
 };
 
 
