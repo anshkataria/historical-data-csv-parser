@@ -20,6 +20,7 @@ public:
         this->filename = filename;
     } ;
     std::vector<Price> parsePrice();
+    double calculateSMA(std::vector <Price> prices,int period);
 };
 
 

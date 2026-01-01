@@ -45,3 +45,14 @@ std::vector<Price> parser::parsePrice() {
     csv.close();
     return prices;
 }
+double calculateSMA(std::vector <Price> prices, int period) {
+    if (prices.size() < period) {
+        return -1.0;
+    }
+    double sma = 0.0;
+    for (int i = 0; i < period; i++) {
+        sma+=prices[i].closingPrice;
+    }
+    sma /= period;
+    return sma;
+}
