@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "parser.h"
+#include "../include/parser.h"
 
 int main() {
     parser parser("data/AAPL.csv");
