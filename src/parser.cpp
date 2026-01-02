@@ -45,7 +45,8 @@ std::vector<Price> parser::parsePrice() {
     csv.close();
     return prices;
 }
-double calculateSMA(std::vector <Price> prices, int period) {
+
+double parser::calculateSMA(std::vector<Price> prices, int period) {
     if (prices.size() < period) {
         return -1.0;
     }
@@ -56,3 +57,4 @@ double calculateSMA(std::vector <Price> prices, int period) {
     sma /= period;
     return sma;
 }
+

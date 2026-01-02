@@ -12,5 +12,8 @@ int main() {
             std::cout << "Date: " <<price.date << "Closing Price: "<<price.closingPrice<<std::endl;
         }
     }
+    int period = 10;
+    double sma = parser.calculateSMA(prices, period);
+    std::cout <<"SMA: "<< sma << std::endl;
     return 0;
 }
